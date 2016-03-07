@@ -23,13 +23,7 @@ namespace WindowsFormsApplication4
           
         }
 
-        /*What your project needs.
-
- Project to be hosted on Github (include your url)
-
-
-    */
-
+   
 
 
         private void Form1_Load(object sender, EventArgs e)
@@ -49,6 +43,7 @@ namespace WindowsFormsApplication4
             btnApproach.Enabled = false;
             btnSmuggle.Enabled = true;
             btnCloak.Enabled = true;
+            btnNewGame.Enabled = false;
             //The turn that the border guards appear on is set here
             MySmuggle.RandomTurnNumber = MySmuggle.NumberGenerate();
            // The count (turn you are currently one) is set to 0 here as you have not done anything yet
@@ -66,7 +61,7 @@ namespace WindowsFormsApplication4
             if (MySmuggle.Cloak >= 1)
             {
 
-                // The button is disabled
+                
                 btnCloak.Enabled = true;
             }
             MessageBox.Show("You smuggle your contraband across the border");
@@ -128,10 +123,11 @@ namespace WindowsFormsApplication4
             if (MySmuggle.Cloak < 1)
             {
 
-                // The button is disabled
+                // If you have no cloaks left, the cloak button is disabled
                 btnCloak.Enabled = false;
             }
-            btnCloak.Enabled = false;
+            //This disables the button after you click it so you cannot click it twice in a row(if you have 2 clicks in total)
+            btnCloak.Enabled = false; 
         }
 
 

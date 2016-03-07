@@ -9,7 +9,7 @@ namespace UnitTestProject1
     public class RandomTest
     {
         [TestMethod]
-        public void NumberGenerate()
+        public void NumberGenerate() // Test to see if the number generate works
         {
             var test = new Smuggle();
             Random Random = new Random();
@@ -18,7 +18,7 @@ namespace UnitTestProject1
 
         }
 
-        [TestMethod]
+        [TestMethod] 
         public void MySmuggleWin()
         {
             var test = new Smuggle();
